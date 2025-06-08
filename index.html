@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZ Crypto Boom - احصل على $20 مجاناً!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #006633; --accent: #f3ba2f; --dark: #0a1a2b; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background: linear-gradient(135deg, #0a1a2b 0%, #1e2026 100%); color: white; line-height: 1.6; overflow-x: hidden; position: relative; }
+        .particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+        .particle { position: absolute; background: rgba(243, 186, 47, 0.5); border-radius: 50%; animation: float 15s infinite linear; }
+        @keyframes float { 0% { transform: translateY(0) translateX(0); opacity: 0; } 25% { opacity: 0.7; } 50% { transform: translateY(-100px) translateX(100px); opacity: 0.3; } 75% { opacity: 0.7; } 100% { transform: translateY(0) translateX(0); opacity: 0; } }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; position: relative; z-index: 2; }
+        header { text-align: center; padding: 30px 0; margin-bottom: 20px; position: relative; }
+        .live-counter { position: absolute; top: 20px; right: 20px; background: rgba(206, 17, 38, 0.8); padding: 8px 15px; border-radius: 20px; font-size: 14px; display: flex; align-items: center; animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(206, 17, 38, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(206, 17, 38, 0); } 100% { box-shadow: 0 0 0 0 rgba(206, 17, 38, 0); } }
+        .logo { font-size: 2.8rem; font-weight: bold; margin-bottom: 10px; background: linear-gradient(90deg, var(--accent), #ffffff); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 0 15px rgba(243, 186, 47, 0.5); }
+        .hero { text-align: center; padding: 40px 20px; background: rgba(30, 32, 38, 0.7); border-radius: 20px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; overflow: hidden; border: 2px solid rgba(243, 186, 47, 0.3); }
+        .hero::before { content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(243, 186, 47, 0.1) 0%, transparent 70%); animation: rotate 20s linear infinite; z-index: -1; }
+        @keyframes rotate { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .bonus-badge { display: inline-block; background: linear-gradient(135deg, var(--accent) 0%, #e8b020 100%); color: var(--dark); font-weight: bold; padding: 8px 20px; border-radius: 30px; font-size: 1.5rem; margin-bottom: 20px; animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .cta-button { display: inline-block; background: linear-gradient(135deg, var(--accent) 0%, #e8b020 100%); color: var(--dark); font-size: 1.5rem; font-weight: bold; padding: 18px 50px; border-radius: 50px; text-decoration: none; transition: all 0.3s; box-shadow: 0 5px 25px rgba(243, 186, 47, 0.6); margin: 10px; position: relative; overflow: hidden; z-index: 1; }
+        .cta-button::before { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: 0.5s; z-index: -1; }
+        .cta-button:hover::before { left: 100%; }
+        .signup-tracker { background: rgba(0, 102, 51, 0.3); padding: 25px; border-radius: 15px; margin-bottom: 40px; text-align: center; }
+        .counter { font-size: 3.5rem; font-weight: bold; margin-bottom: 20px; text-shadow: 0 0 10px rgba(243, 186, 47, 0.5); }
+        .signup-list { max-height: 200px; overflow-y: auto; margin-top: 20px; text-align: left; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 10px; }
+        .signup-item { padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 50px; }
+        .step-card { background: rgba(30, 32, 38, 0.7); border-radius: 15px; padding: 30px; text-align: center; position: relative; overflow: hidden; border-top: 3px solid var(--accent); }
+        .final-cta { text-align: center; padding: 50px 20px; background: linear-gradient(135deg, var(--primary) 0%, #004d26 100%); border-radius: 20px; margin-bottom: 40px; position: relative; overflow: hidden; }
+        .countdown { font-size: 1.8rem; font-weight: bold; margin: 25px 0; color: var(--accent); text-shadow: 0 0 10px rgba(243, 186, 47, 0.5); }
+        footer { text-align: center; padding: 30px 0; color: #d1d4dc; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        @media (max-width: 768px) { .logo { font-size: 2.2rem; } .cta-button { font-size: 1.3rem; padding: 15px 30px; } }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="container">
+        <header>
+            <div class="live-counter"><i class="fas fa-signal"></i> <span id="live-count">128</span> مستخدم الآن</div>
+            <div class="logo">DZ Crypto Boom</div>
+        </header>
+
+        <section class="hero">
+            <h1 style="font-size:2.5rem;margin-bottom:20px;">احصل على <span class="bonus-badge">$20 مجاناً</span> عند التسجيل!</h1>
+            <p style="font-size:1.3rem;max-width:800px;margin:0 auto 30px;color:#d1d4dc;">انضم إلى منصة التداول الرائدة عالمياً واحصل على مكافأة فورية. العرض حصري للمستخدمين الجزائريين ولمدة محدودة فقط!</p>
+            <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00SY5TVIYM" class="cta-button"><i class="fas fa-gift"></i> سجل الآن واحصل على مكافأتك</a>
+            <p><small>العرض ينتهي خلال: <span id="countdown-timer">15:32</span></small></p>
+            
+            <div class="signup-tracker">
+                <h2>المشتركون الجدد الآن</h2>
+                <div class="counter">+<span id="signup-counter">48</span></div>
+                <div class="signup-list" id="signup-list"></div>
+            </div>
+        </section>
+
+        <section class="steps">
+            <div class="step-card">
+                <div style="font-size:1.8rem;font-weight:bold;width:50px;height:50px;background:var(--accent);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">1</div>
+                <h3>انقر على رابط التسجيل</h3>
+                <p>استخدم رابطنا الخاص لفتح حساب جديد</p>
+            </div>
+            <div class="step-card">
+                <div style="font-size:1.8rem;font-weight:bold;width:50px;height:50px;background:var(--accent);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">2</div>
+                <h3>أكمل بياناتك</h3>
+                <p>اسم، بريد إلكتروني، رقم هاتف</p>
+            </div>
+            <div class="step-card">
+                <div style="font-size:1.8rem;font-weight:bold;width:50px;height:50px;background:var(--accent);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">3</div>
+                <h3>قم بإيداع 100 دولار</h3>
+                <p>باستخدام أي وسيلة دفع متاحة</p>
+            </div>
+            <div class="step-card">
+                <div style="font-size:1.8rem;font-weight:bold;width:50px;height:50px;background:var(--accent);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">4</div>
+                <h3>احصل على 20 دولار</h3>
+                <p>ستصلك المكافأة في حسابك فوراً</p>
+            </div>
+        </section>
+
+        <section class="final-cta">
+            <h2 style="font-size:2.8rem;margin-bottom:20px;">لا تفوت فرصتك! العدد محدود</h2>
+            <p style="font-size:1.3rem;max-width:800px;margin:0 auto 30px;">انضم الآن إلى آلاف الجزائريين الذين بدأوا رحلتهم في عالم التداول الرقمي وحققوا أرباحاً حقيقية</p>
+            <div class="countdown">العرض ينتهي خلال: <span id="final-countdown">14:28</span></div>
+            <a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_00SY5TVIYM" class="cta-button"><i class="fas fa-running"></i> سجل الآن قبل انتهاء العرض</a>
+            <p><small>آخر تحديث: <span id="last-update">5 دقائق مضت</span> - تم تسجيل <span id="total-signups">247</span> مستخدم جديد</small></p>
+        </section>
+
+        <footer>
+            <p>DZ Crypto Boom - البوابة الجزائرية الرائدة للانضمام إلى Binance</p>
+        </footer>
+    </div>
+
+    <script>
+        // Create animated background particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                const size = Math.random() * 20 + 5;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDuration = `${Math.random() * 20 + 10}s`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Simulate live user count
+        function updateLiveCounter() {
+            const counter = document.getElementById('live-count');
+            let count = parseInt(counter.textContent) + Math.floor(Math.random() * 5) + 1;
+            counter.textContent = count;
+            setTimeout(updateLiveCounter, Math.floor(Math.random() * 7000) + 8000);
+        }
+        
+        // Simulate signups
+        function updateSignups() {
+            const counter = document.getElementById('signup-counter');
+            const list = document.getElementById('signup-list');
+            const totalSignups = document.getElementById('total-signups');
+            
+            let count = Math.floor(Math.random() * 8) + 3;
+            let total = parseInt(totalSignups.textContent) + count;
+            
+            counter.textContent = count;
+            totalSignups.textContent = total;
+            
+            // Update signup list
+            list.innerHTML = '';
+            const cities = ['الجزائر العاصمة', 'وهران', 'قسنطينة', 'عنابة', 'باتنة'];
+            const names = ['محمد', 'أحمد', 'يوسف', 'سارة', 'فاطمة'];
+            
+            for (let i = 0; i < 5; i++) {
+                const signupItem = document.createElement('div');
+                signupItem.classList.add('signup-item');
+                signupItem.innerHTML = `<i class="fas fa-user-check"></i> ${names[Math.floor(Math.random() * names.length)]} من ${cities[Math.floor(Math.random() * cities.length)]} - قبل ${Math.floor(Math.random() * 3) + 1} دقائق`;
+                list.prepend(signupItem);
+            }
+            
+            document.getElementById('last-update').textContent = `${Math.floor(Math.random() * 5) + 1} دقائق مضت`;
+            setTimeout(updateSignups, Math.floor(Math.random() * 10000) + 10000);
+        }
+        
+        // Countdown timer
+        function startCountdown() {
+            const timer = document.getElementById('countdown-timer');
+            const finalTimer = document.getElementById('final-countdown');
+            let minutes = 15;
+            let seconds = 32;
+            
+            setInterval(() => {
+                seconds--;
+                if (seconds < 0) { minutes--; seconds = 59; }
+                if (minutes < 0) { minutes = 0; seconds = 0; }
+                const timeStr = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                timer.textContent = timeStr;
+                finalTimer.textContent = timeStr;
+            }, 1000);
+        }
+        
+        // Initialize
+        window.onload = function() {
+            createParticles();
+            updateLiveCounter();
+            updateSignups();
+            startCountdown();
+        };
+    </script>
+</body>
+</html>
